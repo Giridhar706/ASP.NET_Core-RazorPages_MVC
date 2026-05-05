@@ -1,0 +1,19 @@
+﻿@page "{id:int}"
+@model ProductApp.Pages.Products.DetailsModel
+
+@if (Model.Product != null)
+{
+    <h2>@Model.Product.Name</h2>
+    <p>@Model.Product.Description</p>
+
+    <ul>
+        @foreach (var cat in Model.Product.Categories)
+        {
+            <li>@cat.CategoryName</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Product not found</p>
+}

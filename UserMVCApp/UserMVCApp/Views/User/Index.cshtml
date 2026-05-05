@@ -1,0 +1,16 @@
+﻿@model User
+
+<h2>User Form</h2>
+
+<form method="post">
+    First Name: <input asp-for="FirstName" /><br />
+    Last Name: <input asp-for="LastName" /><br />
+    Age: <input asp-for="Age" /><br />
+
+    <h3>Address</h3>
+    Street: <input asp-for="Address.Street" /><br />
+    City: <input asp-for="Address.City" /><br />
+    ZipCode: <input asp-for="Address.ZipCode" /><br />
+
+    <button type="submit">Submit</button>
+</form>
